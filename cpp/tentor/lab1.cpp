@@ -42,7 +42,7 @@ int main()
     cout << rows[k] << " ";
   }
   cout << endl;
-  for(int i{0}; i < max; i++)
+  for(int i{0}; i <= max; i++)
   {
     for(int j{0}; j < taps; j++)
     {
@@ -52,7 +52,14 @@ int main()
       }
       else if(rows[j] == i)
       {
-	cout << "V ";
+	if(i == max)
+	{
+	  cout << "V* ";
+	}
+	else
+	{
+	  cout << "V ";
+	}
       }
       else
       {
