@@ -1,0 +1,50 @@
+#include <string>
+#include <iostream>
+#include <random>
+using namespace std;
+
+int taps = 10;
+
+int rndLength()
+{
+  random_device rnd;
+  uniform_int_distribution<int> dist(1,15);
+  return dist(rnd);
+}
+
+void genRows(vector<int> &rows, int &max)
+{
+  int input;
+  int last = 0;
+  for(int i{0}; i < taps; i++)
+  {
+    input = rndLength();
+    rows.push_back(input);
+    cout << "Input: " << input << endl;
+    if(input > last)
+    {
+      last = input;
+      max = input;
+    }
+  }
+}
+
+int main()
+{
+  cout << "----------------------------------" << endl;
+  int max;
+  vector<int> rows;
+  genRows(rows,max);
+  cout << "Max: " << max << endl;
+  /*
+  for(int j{0}; j < max; j++)
+  {
+    for(int i{0}; i < taps; i++)
+    {
+      cout << "|  ";
+    }
+    }*/
+  
+  //cout << genLength() << endl;
+  return 0;
+}

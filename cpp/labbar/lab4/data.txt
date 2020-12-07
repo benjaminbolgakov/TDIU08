@@ -1,0 +1,8 @@
+752 u grazi 4.55
+0 t meltborn 0.5
+y vagga 45
+19 9 turok 3.14
+1 1 1 1
+-24 ! beleriand xy
+kortrad
+-5 kortis
